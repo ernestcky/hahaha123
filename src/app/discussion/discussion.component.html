@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ postTitle }}</h1>
+            <p>{{ postContent }}</p>
+            <ol>
+                <li *ngFor="let comment of comments">
+                    <span><button>upvote</button></span>
+                    {{ comment.content }} 
+                    <span><button>reply</button></span>
+                </li>
+            </ol>
+
+            <form [formGroup]="replyForm">
+                <input formControlName="replyMsg">
+            </form>
+            <button (click)="reply()">Reply</button>
+            <a (click)="back()">back</a>
+        </div>
+    </div>
+</div>

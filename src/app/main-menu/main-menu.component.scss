@@ -1,0 +1,43 @@
+ul {
+    list-style: none; /* Remove default numbering */
+}
+
+li {
+    padding: 10px 10px 10px 10px;
+    margin: 5px;
+    background: rgb(224, 224, 224);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+li:hover {
+    background: rgba(122, 206, 255);
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    padding-left: 40px;
+}
+
+.row {
+    padding-left: 40px;
+}
+
+#listItem {
+    padding: 10px 10px 10px 10px;
+    background: rgb(224, 224, 224);
+    border-radius: 5px;
+    text-decoration: none;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#listItem:hover {
+    background: rgba(122, 206, 255);
+    text-decoration: none;
+}

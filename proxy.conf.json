@@ -1,0 +1,56 @@
+{
+    "/login": {
+        "target": "http://127.0.0.1:5000/",
+        "pathRewrite": {
+            "^login": "/login"
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/signup": {
+        "target": "http://127.0.0.1:5000/",
+        "pathRewrite": {
+            "^signup": "/signup"
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/fetch_latest_post": {
+        "target": "http://127.0.0.1:5000/",
+        "pathRewrite": {
+            "^fetch_latest_post": "/fetch_latest_post"
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/fetch_comment": {
+        "target": "http://127.0.0.1:5000/",
+        "pathRewrite": {
+            "^fetch_comment": "/fetch_comment"
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/post_new_comment": {
+        "target": "http://127.0.0.1:5000/",
+        "pathRewrite": {
+            "^post_new_comment": "/post_new_comment"
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    },
+    "/post_new_post": {
+        "target": "http://127.0.0.1:5000/",
+        "pathRewrite": {
+            "^post_new_post": "/post_new_post"
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }    
+}

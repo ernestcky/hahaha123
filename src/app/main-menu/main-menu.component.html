@@ -1,0 +1,44 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <br>
+            <h1>Please select your course: </h1>
+            <br>
+            <ul>
+                <a [routerLink]="['/discussion', course]" *ngFor="let course of courseList">
+                    <li>
+                        {{ course }}
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <br>
+            <br>
+            <h1>Current Topics</h1>
+            <br>
+            <div class="container">
+                <a [routerLink]="['/discussion', p.id]" *ngFor="let p of postList">
+                    <div class="row" id="listItem">
+                        {{p.title}}
+                    </div>                    
+                </a>
+            </div>
+            <button style="margin-left: 15px; border-radius: 5px;" (click)="addPost()">New Post</button>
+            <div class="container" *ngIf="addPostBool==true">
+                <form [formGroup]="newPostForm">
+                    <label>Title</label><br>
+                    <input type="text" formControlName="title"><br>
+                    <label>Content</label><br>
+                    <input type="text" formControlName="content"><br>
+                </form>
+                <button (click)="submit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
