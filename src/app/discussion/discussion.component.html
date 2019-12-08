@@ -1,21 +1,64 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1>{{ postTitle }}</h1>
-            <p>{{ postContent }}</p>
-            <ol>
+            <br>
+            <br>
+            <h1>Topic: {{ postTitle }}</h1>
+            <p>
+                Written by {{ postAuthor }} at {{postTime}}
+            </p>
+            <p>Content: {{ postContent }}</p>
+            <!-- <ol>
                 <li *ngFor="let comment of comments">
-                    <span><button>upvote</button></span>
-                    {{ comment.content }} 
-                    <span><button>reply</button></span>
-                </li>
-            </ol>
+                    <span><button (click)="upvote(comment.id)">upvote</button></span>
+                    {{ comment.content }} upvote: {{comment.upvote}} written by {{comment.username}} at {{comment.created_at}}
 
-            <form [formGroup]="replyForm">
+                </li>
+            </ol> -->
+
+            <div class="container" id="c1">
+                <div class="row" id="header_row">
+                    <div class="col-1">
+                        Upvote
+                    </div>
+                    <div class="col-4">
+                        Content
+                    </div>
+                    <div class="col-2">
+                        Author
+                    </div>
+                    <div class="col-2">
+                        Upvote Number
+                    </div>
+                    <div class="col-3">
+                        Created at
+                    </div>                                
+                </div>
+
+                <div class="row" id="listItem" *ngFor="let comment of comments">
+                    <div class="col-1">
+                        <button (click)="upvote(comment.id)" id="upvoteBtn">upvote</button>
+                    </div>
+                    <div class="col-4">
+                        {{comment.content}}
+                    </div>
+                    <div class="col-2">
+                        {{comment.username}}
+                    </div>
+                    <div class="col-2">
+                        {{comment.upvote}}
+                    </div>
+                    <div class="col-3">
+                        {{comment.created_at}}
+                    </div>                        
+                </div>                    
+            </div>
+
+            <form [formGroup]="replyForm" style="margin-left: 20px; margin-bottom: 10px; margin-top: 10px; width: 300px;">
                 <input formControlName="replyMsg">
             </form>
-            <button (click)="reply()">Reply</button>
-            <a (click)="back()">back</a>
+            <button (click)="reply()" style="margin-left: 20px;">Reply</button><br><br>
+            <a (click)="back()" style="margin-left: 10px;">back</a>
         </div>
     </div>
 </div>

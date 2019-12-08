@@ -14,8 +14,11 @@ export class DiscussionComponent implements OnInit {
   postList: any;
   postTitle: any;
   postContent: any;
+  postAuthor: any;
+  postTime: any;
   replyMsg: string;
   replyForm: FormGroup;
+
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -35,6 +38,8 @@ export class DiscussionComponent implements OnInit {
       if(this.postList[i].id == this.post_id){
         this.postTitle = this.postList[i].title;
         this.postContent = this.postList[i].content;
+        this.postAuthor = this.postList[i].username;
+        this.postTime = this.postList[i].created_at;
       }
     }
   }
@@ -45,6 +50,11 @@ export class DiscussionComponent implements OnInit {
 
   back(): void {
     this.router.navigateByUrl("");
+  }
+
+  async upvote(comment_id) {
+    await this.upvoteComment(comment_id.toString());
+    window.location.reload();
   }
 
   async reply(): Promise<void> {
@@ -125,5 +135,26 @@ export class DiscussionComponent implements OnInit {
     } catch(e) {
         console.log(e)
     }
-}
+  }
+
+  async upvoteComment(comment_id) {
+    try {
+        const response =  await fetch('/upvote_comment', {
+            method: "post",
+            headers: {
+                // "Authorization": `Bearer ${MEDIUM_ACCESS_TOKEN}`,
+                "Content-type": "application/json",
+                "Accept": "application/json",
+                "Accept-Charset": "utf-8"
+            },
+            body: JSON.stringify({
+                comment_id: comment_id,
+            })
+        })
+        const responseJSON = await response.json();
+        console.log(responseJSON)
+    } catch(e) {
+        console.log(e)
+    }
+  }
 }

@@ -22,10 +22,35 @@
             <br>
             <h1>Current Topics</h1>
             <br>
-            <div class="container">
+
+            <div class="container" *ngIf="postList.length == 0">
+                <h1>Oops.... No post yet =.=</h1>
+                <h2 style="margin-left: 50px;">Start the first topic! ^_^</h2>
+            </div>
+
+            <div class="container" *ngIf="postList.length != 0">
+                <div class="row" id="header_row">
+                    <div class="col-4">
+                        Title
+                    </div>
+                    <div class="col-4">
+                        Author
+                    </div>
+                    <div class="col-4">
+                        Created at
+                    </div>                                
+                </div>
                 <a [routerLink]="['/discussion', p.id]" *ngFor="let p of postList">
                     <div class="row" id="listItem">
-                        {{p.title}}
+                        <div class="col-4">
+                            {{p.title}}
+                        </div>
+                        <div class="col-4">
+                            {{p.username}}
+                        </div>
+                        <div class="col-4">
+                            {{p.created_at}}
+                        </div>                        
                     </div>                    
                 </a>
             </div>
@@ -35,7 +60,8 @@
                     <label>Title</label><br>
                     <input type="text" formControlName="title"><br>
                     <label>Content</label><br>
-                    <input type="text" formControlName="content"><br>
+                    <input type="text" formControlName="content" style="width: 80%;"><br><br>
+                    <!-- <textarea rows="4" cols="50" formControlName="comment"></textarea> -->
                 </form>
                 <button (click)="submit()">Submit</button>
             </div>

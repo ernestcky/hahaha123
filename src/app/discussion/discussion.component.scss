@@ -7,3 +7,31 @@ a:hover {
     color:purple;
     text-decoration: underline;
 }
+
+#header_row {
+    padding: 10px 10px 10px 10px;
+    background: rgb(134, 134, 134);
+    border-radius: 5px;
+    text-decoration: none;
+    margin: auto;
+    margin-bottom: 5px;
+    color: rgb(248, 248, 248);
+}
+
+#listItem {
+    padding: 10px 10px 10px 10px;
+    background: rgb(224, 224, 224);
+    border-radius: 5px;
+    text-decoration: none;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#upvoteBtn {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+#c1 {
+    text-align: center;
+}

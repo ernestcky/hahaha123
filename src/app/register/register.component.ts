@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +13,7 @@ export class RegisterComponent implements OnInit {
 
   regForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.regForm = this.fb.group({
@@ -41,6 +43,8 @@ export class RegisterComponent implements OnInit {
       })
       const responseJSON = await response.json();
       console.log(responseJSON)
+      this.router.navigateByUrl("");
+
   } catch(e) {
       console.log(e)
   }

@@ -52,5 +52,14 @@
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
+    },
+    "/upvote_comment": {
+        "target": "http://127.0.0.1:5000/",
+        "pathRewrite": {
+            "^post_new_post": "/upvote_comment"
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
     }    
 }

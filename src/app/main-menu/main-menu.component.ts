@@ -14,7 +14,7 @@ import { UserService } from '../user.service';
 
 export class MainMenuComponent implements OnInit {
   isLoggedIn: boolean;
-  postList: any;
+  postList: JSON[];
   addPostBool: boolean = false;
   newPostForm: FormGroup = new FormGroup({
     title: new FormControl('', Validators.required),
@@ -25,7 +25,7 @@ export class MainMenuComponent implements OnInit {
               private userService: UserService) { }
 
   async ngOnInit() {
-    this.postList = await this.fetchLatestPost("1", "10");
+    this.postList = await this.fetchLatestPost("1", "100");
     console.log(this.postList);
     this.isLoggedIn = this.userService.isLoggedIn;
   }
@@ -39,7 +39,7 @@ export class MainMenuComponent implements OnInit {
 
   submit() {
     if(this.newPostForm.get('title').value=="" || this.newPostForm.get('content').value=="") return;
-    this.postNewPost("3", this.newPostForm.get('title').value, this.newPostForm.get('content').value);
+    this.postNewPost("1", this.newPostForm.get('title').value, this.newPostForm.get('content').value);
     console.log(this.newPostForm.get('title').value, this.newPostForm.get('content').value);
     window.location.reload();
   }
