@@ -48,7 +48,7 @@ This involves in data collecting. Also, the upvote mechanism can provide insight
 
 8. Logout and registering another account, and then you can reply and upvote a comment.
 
-![Alt Text](https://imgur.com/247j1b2.jpg)
+![Alt Text](https://imgur.com/ialOBTD.jpg)
 
 9. Have fun and enjoy chatting in the course forum!
 
