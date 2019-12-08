@@ -3,7 +3,9 @@
     <div class="row">
         <div class="col-12">
              <div class="container" id="formArea">
-                 <form [formGroup]="regForm" id="form">
+                <form [formGroup]="regForm" id="form">
+                    <br>
+                    <h1>Register</h1>
                     <label>Username</label><br>
                     <input type="text" placeholder="username" aria-label="username" formControlName="username"><br>
                     <label>Password</label><br>
@@ -11,9 +13,10 @@
                     <label>First Name</label><br>
                     <input type="text" placeholder="First Name" aria-label="First Name" formControlName="first_name"><br>
                     <label>Last Name</label><br>
-                    <input type="text" placeholder="Last Name" aria-label="Last Name" formControlName="last_name"><br>
+                    <input type="text" placeholder="Last Name" aria-label="Last Name" formControlName="last_name"><br><br>
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchBtn" (click)="reg()">Register</button>
-                 </form>
+                    <br><br>
+                </form>
              </div>
         </div>
     </div>
