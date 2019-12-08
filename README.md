@@ -11,6 +11,12 @@ Run `ng serve` for a dev server.
 Navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files. 
 
+## Relation to Big data and Cloud technology
+
+This course forum is hosted on aws using docker and kubernetes. This requires using cloud technologies.
+Also, this forum can let the teaching teams to collect data about what is the students concerning or discussing. 
+This involves in data collecting. Also, the upvote mechanism can provide insights on what is the students like the most.
+
 ## Usage
 1. When you navigate to the web, you will see the homepage with no post at first.
 
