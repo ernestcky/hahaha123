@@ -11,22 +11,39 @@ Run `ng serve` for a dev server.
 Navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files. 
 
-##Usage
+## Usage
 1. When you navigate to the web, you will see the homepage with no post at first.
+
 ![Alt Text](https://imgur.com/oTuM0Mk.jpg)
+
 2. Register an account.
+
 ![Alt Text](https://imgur.com/Kja6zNy.jpg)
+
 3. Login your account.
+
 ![Alt Text](https://imgur.com/xV47Aw4.jpg)
+
 4. Press `New Post` and input the `title` and `content` of your post.
+
 ![Alt Text](https://imgur.com/BE3wAWU.jpg)
+
 5. After you press `submit`, you will see the post you just submitted.
+
 ![Alt Text](https://imgur.com/njRcD1g.jpg)
+
 6. Navigate to the post by clicking the row displaying the post, then you can reply to the post.
+
 ![Alt Text](https://imgur.com/4qK9A5J.jpg)
+
 7. The reply has been posted.
+
 ![Alt Text](https://imgur.com/0QprmoE.jpg)
-8. Logout and registering another account, and then you can reply and upvote a comment
+
+8. Logout and registering another account, and then you can reply and upvote a comment.
+
 ![Alt Text](https://imgur.com/247j1b2.jpg)
+
 9. Have fun and enjoy chatting in the course forum!
+
 ![Alt Text](https://imgur.com/XGZClg4.jpg)
